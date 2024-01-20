@@ -13,8 +13,7 @@ function App() {
   return (
     <>
     <h1>Tailwind Test</h1>
-      <Card channel = "chai aur code" someObj = {myObj} newArr = {newArr} />
-      <Card/>
+      <Card username = "chai aur code" btnText = "push me" />
     </>
   )
 }
