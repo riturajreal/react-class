@@ -36,7 +36,7 @@ function App() {
 
     <h1 className="font-bold text-3xl"><span className="text-orange-500">Postman </span>Clone</h1>
 
-    <div className="container flex flex-col justify-normal items-center mx-auto mt-8 p-8 bg-gray-50 overflow-hidden rounded-2xl max-w-[1200px]">
+    <div className="container flex flex-col justify-normal items-center mx-auto mt-8 p-8 bg-gray-50 overflow-hidden rounded-2xl max-w-[500px]">
       <div className="flex justify-normal items-center ">
         
           {/* option */}
