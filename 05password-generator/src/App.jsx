@@ -1,5 +1,5 @@
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect, useRef } from 'react';
 
 function App() {
 
@@ -15,7 +15,12 @@ function App() {
   //password --> empty string
   const [password, setPassword] = useState("");
 
+  //useRef Hook
+  const passwordRef = useRef(null);
 
+
+
+// useCallback() Hook
   // passwordGenerator function -- usecallback() memoize karne ke liye
   const passwordGenerator = useCallback(()=> {
     let pass = "";
@@ -34,6 +39,12 @@ function App() {
   }, [length, numberAllowed, charAllowed, setPassword]);
 
 
+const copyPasswordToClipboard = useCallback(()=>{
+  window.navigator.clipboard.writeText(password);
+}, [password])
+
+
+// useEffect() Hook
   // agar dependecies me kuch bhi changes ho
   // to dubara se passwordGenerator run kardo
   useEffect(()=> {
@@ -54,9 +65,10 @@ function App() {
           placeholder='password'
           readOnly
           value={password}
+          ref={passwordRef}
           className='outline-none w-full py-1 px-3' />
 
-          <button className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
+          <button onClick={copyPasswordToClipboard} className='outline-none bg-blue-700 text-white px-3 py-0.5 shrink-0'>copy</button>
 
         </div>
 
