@@ -31,15 +31,15 @@ const convert = () => {
 
   return (
     <>
-      return (
         <div
-            className="w-full h-screen flex flex-wrap justify-center items-center bg-cover bg-no-repeat"
+            className="w-full p-5 h-screen flex flex-wrap justify-center bg-cover bg-center bg-no-repeat"
             style={{
-                backgroundImage: `url('https://img.freepik.com/premium-vector/money-transfer-global-currency-stock-exchange_115579-923.jpg')`,
+                backgroundImage: `url('https://img.freepik.com/premium-vector/money-transfer-global-currency_115579-1115.jpg')`,
             }}
         >
-            <div className="w-full">
-                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
+            <div className="w-full mt-20">
+            <h1 className="text-center font-semibold text-white mb-5 text-4xl">Currency Converter</h1>
+                <div className="w-full max-w-md mx-auto border border-gray-60 rounded-3xl p-5 backdrop-blur-md bg-white bg-opacity-20">
                     <form
                         onSubmit={(e) => {
                             e.preventDefault();
@@ -58,7 +58,7 @@ const convert = () => {
                         <div className="relative w-full h-0.5">
                             <button
                                 type="button"
-                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 text-white px-2 py-0.5"
+                                className="absolute left-1/2 -translate-x-1/2 -translate-y-1/2 border-2 border-white rounded-md bg-blue-600 hover:bg-blue-900 duration-700 text-white px-2 py-0.5"
                                 onClick={swap}
                             >
                                 swap
@@ -74,7 +74,7 @@ const convert = () => {
                                 amountDisable  
                             />
                         </div>
-                        <button type="submit" className="w-full bg-blue-600 text-white px-4 py-3 rounded-lg " onClick={convert}>
+                        <button type="submit" className="w-full bg-blue-600 hover:bg-blue-900 duration-700 text-white px-4 py-3 rounded-lg " onClick={convert}>
                             Convert {from.toUpperCase()} to {to.toUpperCase()}
                             
                         </button>
